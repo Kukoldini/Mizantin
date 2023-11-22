@@ -1,0 +1,298 @@
+@font-face {
+	font-family: "Franklin Gothic Book";
+	src: url("../fonts/franklin-gothic-book/franklin-gothic-book.eot");
+}
+body {
+    font-size: 18px;
+    font-family: 'Circe';
+    margin: 0;
+    padding: 0;
+}
+header {
+    max-width: 1360px;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-nav {
+    height: 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    &__item {
+        color: #959595;
+        padding: 5px 10px;
+        margin: 0 10px;
+        &:hover {
+            color: #000;
+        }
+    }
+
+    &__bottom-nav li {
+        display: flex;
+        position: relative;
+    }
+    &__bottom-item {
+        text-transform: uppercase;
+        color: #000;
+        font-size: 16px;
+        &:hover + img {
+            display: flex;
+        }
+    } 
+
+    &__arrow {
+        display: none;
+        position: absolute;
+        right: 0;
+        bottom: 40%;
+    }
+
+    &__img {
+        display: block;
+        width: 24px;
+        height: 24px;
+        margin: 0px 10px;
+    }
+    &__bottom-shadow {
+        box-shadow: 0px 3px 4px 0px #00000040;
+    }
+}
+
+.header-presentation {
+    margin: 26px auto;
+}
+.presentation-container {
+
+	&__img {
+        width: 48px;
+        height: 48px;
+    }
+
+	&__description {
+        margin-left: 15px;
+        font-size: 18px;
+	}
+
+    &__flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+	&__phone {
+        display: flex;
+        align-items: center;
+	}
+
+	&__phone-number {
+        font-size: 44px;
+        color: #D93F3C;
+        font-family: 'Franklin Gothic Book';
+        letter-spacing: -4px;
+        transform: scale(.9, 1.2);
+    }
+
+	&__call {
+        width: 100%;
+	}
+
+	&__button {
+        color: #959595;
+
+        &:hover {
+            color: #D93F3C;
+            border-bottom: 1px solid #D93F3C;
+        }
+	}
+}
+.header-underline {
+    margin: 20px;
+    justify-content: start;
+    
+    &__item {
+        color: #959595;
+    }
+
+    &__arrow {
+        transform: rotate(-90deg);
+        margin: 0 5px;
+    }
+}
+.wrapper {
+    max-width: 1136px;
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+
+
+.introduction {
+
+    &__text {
+        font-size: 56px;
+        font-family: 'Franklin Gothic Book';
+    }
+
+    &__list {
+        padding: 4px 0 4px 20px;
+        border-left: 4px solid #D93F3C;
+    }
+
+    &__item {
+        margin: 20px 0;
+    }
+}
+.title {
+    font-size: 48px;
+    font-family: 'Franklin Gothic Book';
+    letter-spacing: -4px;
+}
+.red-text {
+    color: #D93F3C;
+}
+.introduction-gallery {
+    margin: 30px 0;
+
+    &__item {
+        width: 32%;
+    }
+
+    &__img {
+        width: 100%;
+    }
+}
+.gallery {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info {
+
+    &__introduction {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__list-container {
+        margin-top: 20px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+}
+.description {
+    max-width: 500px;
+    width: 100%;
+}
+.line {
+    border: none;
+    background-color: #D93F3C;
+    height: 4px;
+    width: 55px;
+    float: left;
+}
+.underline {
+    margin: 0;
+    max-width: 464px;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+}
+.info-right {
+    max-width: 560px;
+    width: 100%;
+    height: 315px;
+}
+.video {
+    width: 100%;
+    height: 100%;
+}
+
+.team {
+
+    &__title {
+    }
+
+    &__discription {
+    }
+
+    &__text {
+    }
+}
+.team-gallery {
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__img-container {
+        max-width: 272px;
+        width: 96%;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__img-description {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    &__text {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.swipe-button {
+    margin-top: 40px;
+    float: right;
+    display: flex;
+    width: 97px;
+    height: 46px;
+
+    &__left {
+        width: 50%;
+        border: 1px solid #000;
+    }
+
+    &__arrow {
+        transform: rotate(180deg);
+    }
+
+    &__right {
+        width: 50%;
+        border: 1px solid #000;
+    }
+}
+.button-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
