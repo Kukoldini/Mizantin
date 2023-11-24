@@ -1,11 +1,14 @@
-let leftButton = document.querySelector('.swipe-button__left');
-let rightButton = document.querySelector('.swipe-button__right');
-let sliderWrapper = document.querySelector('.team-gallery__wrapper');
-let paginationLine = document.querySelector('.pagination__line');
+let leftButton = document.querySelectorAll('.swipe-button__left');
+let rightButton = document.querySelectorAll('.swipe-button__right');
+let paginationLine = document.querySelectorAll('.pagination__line');
+
+let galleryWrapper = document.querySelector('.team-gallery__wrapper');
+let chooseWrapper = document.querySelector('.swiper__wrapper');
+
 let offset = 0;
 let paginationOffset = 0;
 
-rightButton.addEventListener('click', () => {
+const rightButtonShift = () => {
 
     offset = offset + 343;
     paginationOffset = paginationOffset - 25;
@@ -15,12 +18,13 @@ rightButton.addEventListener('click', () => {
         paginationOffset = 0;
     }
 
-    sliderWrapper.style.left = -offset + 'px';
+    galleryWrapper.style.left = -offset + 'px';
+    chooseWrapper.style.left = -offset + 'px';
     paginationLine.style.left = -paginationOffset + '%';
 
-})
-
-leftButton.addEventListener('click', () => {
+}
+const leftButtonShift = () => {
+    
     offset = offset - 343;
     paginationOffset = paginationOffset + 25;
 
@@ -29,6 +33,16 @@ leftButton.addEventListener('click', () => {
         paginationOffset = -75;
     }
 
-    sliderWrapper.style.left = -offset + 'px';
+    galleryWrapper.style.left = -offset + 'px';
+    chooseWrapper.style.left = -offset + 'px';
     paginationLine.style.left = -paginationOffset + '%';
-})
+
+}
+
+for (let i = 0; i < leftButton.length; i++) {
+    
+    rightButton[i].addEventListener('click', rightButtonShift);
+
+    leftButton[i].addEventListener('click', leftButtonShift);
+    
+}
