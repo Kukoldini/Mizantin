@@ -149,6 +149,11 @@ li {
 }
 .introduction {
 
+    position: relative;
+
+    &__content {
+        overflow: hidden;
+    }
     &__text {
         font-size: 56px;
         font-family: 'Franklin Gothic Book';
@@ -159,9 +164,26 @@ li {
         border-left: 4px solid #D93F3C;
     }
 
+    &__gallery {
+        position: relative;
+        transition: .3s;
+        display: flex;
+        justify-content: space-between;
+        margin: 30px 0; 
+    }
+
     &__item {
+        width: 32%;
+    }
+
+    &__description-item {
         margin: 20px 0;
     }
+
+    &__img {
+        width: 100%;
+    }
+
 }
 .title {
     font-size: 48px;
@@ -172,19 +194,14 @@ li {
     color: #D93F3C;
 }
 .introduction-gallery {
+    display: flex;
+    justify-content: space-between;
     margin: 30px 0;
 
-    &__item {
-        width: 32%;
-    }
 
     &__img {
         width: 100%;
     }
-}
-.gallery {
-    display: flex;
-    justify-content: space-between;
 }
 
 .wide-background {
@@ -256,13 +273,18 @@ li {
 
 .team-gallery {
 
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
     &__item {
+        margin: 0 10px;
         display: flex;
         flex-direction: column;
     }
 
     &__img-container {
-        max-width: 274px;
+        max-width: 272px;
         width: 100%;
     }
 
@@ -290,6 +312,7 @@ li {
     border-top: 1px solid #959595;
 
     &__line {
+        transition: .3s;
         position: absolute;
         border: none;
         background-color: #D93F3C;
@@ -383,8 +406,13 @@ li {
 		}
 }
 
-.choose {
-    //overflow: hidden;
+
+.reviews {
+
+    &__content {
+        overflow: hidden;
+    }
+
     &__header {
         margin-top: 60px;
     }
@@ -392,18 +420,19 @@ li {
     &__header-title {
         margin: 18px 0;
     }
-}
-.swiper {
 
     &__wrapper {
         position: relative;
         display: flex;
         justify-content: space-between;
+        width: 150%;
+        transition: .3s;
     }
 
     &__item {
         margin: 20px 0 0 20px;
         display: flex;
+        width: 50%;
     }
 
     &__quotes {
@@ -588,6 +617,11 @@ li {
         font-size: 32px;
     }
     .introduction {
+
+        &__container {
+            overflow: hidden;
+        }
+
         &__text {
             font-size: 42px;
         }
@@ -603,6 +637,7 @@ li {
         overflow: hidden;
 
         &__wrapper {
+            display: flex;
             transition: .3s;
             position: relative;
         }
@@ -632,7 +667,13 @@ li {
             transition: .3s;
 		}
     }
-    .swiper {
+    .principles {
+        &__wrapper {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    .reviews {
 
         overflow: hidden;
     
